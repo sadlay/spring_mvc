@@ -71,6 +71,14 @@ public class PersonController {
         personService.insertPerson(person);
         return person;
     }
+    /**
+     *
+     * @Description:测试性别转换器
+     * @param:
+     * @return: java.lang.String
+     * @auther: lay
+     * @date: 22:58 2018/11/11
+     */
     @RequestMapping("/sex")
     @ResponseBody
     public String sex(@RequestParam("sex") SexEnum sexEnum){
