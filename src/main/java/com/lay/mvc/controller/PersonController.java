@@ -74,7 +74,7 @@ public class PersonController {
     /**
      *
      * @Description:测试性别转换器
-     * @param:
+     * @param:SexEnum
      * @return: java.lang.String
      * @auther: lay
      * @date: 22:58 2018/11/11
