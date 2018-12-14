@@ -1,4 +1,4 @@
-package com.lay.mvc.dao;
+package com.lay.mvc.dao.db1;
 
 import com.lay.mvc.entity.Person;
 import org.apache.ibatis.annotations.Mapper;
@@ -14,7 +14,6 @@ import java.util.List;
  * @Modified By:IntelliJ IDEA
  */
 @Mapper
-@Repository
 public interface PersonDao {
 
     //获取单个用户

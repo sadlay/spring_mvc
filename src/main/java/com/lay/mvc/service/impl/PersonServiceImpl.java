@@ -1,6 +1,7 @@
 package com.lay.mvc.service.impl;
 
-import com.lay.mvc.dao.PersonDao;
+import com.lay.mvc.dao.db1.PersonDao;
+import com.lay.mvc.dao.db2.PersonDao2;
 import com.lay.mvc.entity.Person;
 import com.lay.mvc.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.multipart.support.StandardMultipartHttpServletRequest;
 
 import java.util.List;
 
@@ -25,11 +25,22 @@ public class PersonServiceImpl implements PersonService {
     @Autowired
     PersonDao personDao ;
 
+
+    @Autowired
+    PersonDao2 personDao2;
+
     @Override
     @Transactional
     public Person getPerson(Long id) {
         return personDao.getPerson(id);
     }
+
+    @Override
+    @Transactional
+    public Person getDb2Person(Long id) {
+        return personDao2.getPerson(id);
+    }
+
 
     @Override
     @Transactional(isolation = Isolation.READ_COMMITTED, timeout = 1, propagation = Propagation.REQUIRES_NEW)

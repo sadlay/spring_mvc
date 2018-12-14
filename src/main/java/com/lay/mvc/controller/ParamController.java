@@ -2,6 +2,7 @@ package com.lay.mvc.controller;
 
 import com.lay.mvc.entity.Person;
 import com.lay.mvc.service.PersonService;
+import com.lay.mvc.service.impl.PersonServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.NumberFormat;
@@ -87,6 +88,11 @@ public class ParamController {
     @ResponseBody
     public Person get(@PathVariable("id") Long id){
         return personService.getPerson(id);
+    }
+    @GetMapping("/db2/{id}")
+    @ResponseBody
+    public Person getDb2(@PathVariable("id") Long id){
+        return personService.getDb2Person(id);
     }
     //映射页面
     @GetMapping("/format/form")

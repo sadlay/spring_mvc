@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lay.mvc.dao.PersonDao">
+<mapper namespace="com.lay.mvc.dao.db1.PersonDao">
     <select id="getPerson" parameterType="long" resultType="person">
 		select id,person_name,sex,note from t_person where id=#{id}
 	</select>

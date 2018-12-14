@@ -16,6 +16,8 @@ public interface PersonService {
     //获取单个用户
     public Person getPerson(Long id);
 
+    public Person getDb2Person(Long id) ;
+
     //新增用户
     public Person insertPerson(Person person);
 
